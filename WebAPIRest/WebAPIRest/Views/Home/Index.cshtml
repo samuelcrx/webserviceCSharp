@@ -1,0 +1,43 @@
+﻿<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Cadastro</h2>
+        <p>Insira os dados para cadastrar um usuario</p>
+        <form method="GET" action="https://localhost:44368/api/usuario/ConsultarUsuarioPorCodigo/{codigo}">
+        <label for="codigo">Codigo:</label>
+        <input type="text" id="myLife"/><br/><br />
+
+        <label for="Nome">Nome:</label>
+        <input type="text"/><br/><br />
+
+        <label for="Login">Login:</label>
+        <input type="text" /><br/><br/>
+        <p><a class="btn btn-default" id="teste">Cadastrar</a></p>
+
+        </form>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+<script>
+    let testing = document.getElementById("#myLife").value;
+    let testes = document.getElementById("#teste");
+
+
+    document.getElementById("teste").onclick = function () {
+        testes.setAttribute("href", "https://localhost:44368/api/usuario/ConsultarUsuarioPorCodigo/2");
+    }
+</script>
